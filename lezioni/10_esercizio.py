@@ -47,14 +47,14 @@ def sottolista2(lista: List[int], sublist: List[int]) -> bool:
     while start + index < len(lista):
         print(f"{start=}, {index=}")
         if lista[start + index] != sublist[index]:
-            start = start + index
+            start = start + index + 1
             index = 0
         elif index == len(sublist)-1:
             return True
         else:
             index = index + 1
     return False
-print(sottolista2([1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,7],[1,2,3,4,5,6,7]))
+print(sottolista2([1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,7],[1,2,3,4,5,6,7,8]))
 
 # 3. funzione che acceta due liste, ritorni una lista con i valori mancanti della seconda rispetto alla prima
 # esempio 1> [1,2,3,4,5], [2,4,6] -> [1,3,5]
